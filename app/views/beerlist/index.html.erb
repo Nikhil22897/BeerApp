@@ -1,0 +1,16 @@
+<h1>Beerlist</h1>
+<div class='list'>
+  <%= will_paginate @beerlist %>
+    <% @beerlist.each do |beer| %>
+      <%=image_tag(beer['image'], height: 100, width: 100)%>
+      <ul>
+          <li>Name: <%= beer['name'] %></li>
+          <li>Style: <%= beer['style'] %></li>
+          <li>Weight: <%= beer['ounces'] %></li>
+          <li>Alcohol By Volume: <%= beer['abv'] %></li>
+          <li>International Bittering Unit: <%= beer['ibu'] %></li>
+
+        </ul>
+    <% end %>
+  <%= will_paginate @beerlist %>
+</div> 
